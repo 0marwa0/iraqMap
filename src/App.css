@@ -1,0 +1,62 @@
+body {
+  background-color: #353b48;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .customOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}
+.customModal {
+  background-color: #353b48;
+  max-width: 500px;
+  width: 100%;
+} */
+
+/* .ireact-responsive-modal-modal {
+  overflow-y: none !important;
+} */
+.react-responsive-modal-modal {
+  overflow: hidden !important;
+  background-color: #353b48 !important;
+  border-radius: 20px;
+  padding-bottom: 0 !important;
+}
+.slick-prev {
+  margin-left: 7px;
+}
+.slick-next {
+  margin: 0 10px;
+}
+img {
+  border-radius: 20px 20px 20px 20px;
+}
+.slick-initialized .slick-slide {
+  /* padding-left: 8px; */
+  margin-right: 1px;
+  padding-top: 18px;
+}
+
+.slick-dots {
+  position: absolute;
+  display: block;
+  width: 99%;
+  padding: 0;
+  margin-top: -20px;
+  list-style: none;
+  text-align: center;
+  background-color: #00000069;
+  height: 100px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 0 0 20px 20px;
+}
+button::before {
+  opacity: 0.75;
+  color: #f9f9f9 !important;
+}
+.slick-dots li button::before {
+  font-size: 18px !important;
+}
