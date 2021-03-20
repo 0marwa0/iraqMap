@@ -6,6 +6,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+.innerSlide {
+  text-align: right;
+}
+.innerSlide img {
+  position: relative;
+}
+.innerSlide p {
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.562);
+  padding: 10px;
+  word-spacing: 3px;
+  width: 250px;
+}
 /* .customOverlay {
   background: rgba(36, 123, 160, 0.7);
 }
@@ -22,7 +37,10 @@ body {
   overflow: hidden !important;
   background-color: #353b48 !important;
   border-radius: 20px;
-  padding-bottom: 0 !important;
+  /* padding-bottom: 0 !important; */
+}
+.slick-slider {
+  height: 500px;
 }
 .slick-prev {
   margin-left: 7px;
@@ -44,14 +62,14 @@ img {
   display: block;
   width: 99%;
   padding: 0;
-  margin-top: -20px;
   list-style: none;
   text-align: center;
-  background-color: #00000069;
-  height: 100px;
+  background-color: #000000a8;
+  height: 60px;
+  border-radius: 0 0 20px 20px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 0 0 20px 20px;
+  bottom: 0px !important;
 }
 button::before {
   opacity: 0.75;
