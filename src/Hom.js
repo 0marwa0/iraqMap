@@ -8,12 +8,11 @@ import view from "./image/s.jpg";
 import map from "./image/iraq.jpg";
 import { coords } from "./coords";
 import { Store } from "./Store";
-const Home = () => {
+const Home = (props) => {
   const [isOpen, setOpen] = useState(false);
   const open = (open, name) => {
     setOpen(open);
     setData(Store[name]);
-    console.log(Store[name], "dattttttt");
   };
   const [data, setData] = useState([]);
   const settings = {
@@ -33,7 +32,8 @@ const Home = () => {
               shape="poly"
               coords={x.Coords}
               href="#"
-              onClick={() => open(true, x.name)}
+              onClick={() => props.history.push(`info/${x.name}`)}
+              // onClick={() => open(true, x.name)}
             />
           );
         })}

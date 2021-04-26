@@ -19,8 +19,8 @@ function Gov(props) {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "red",
-          }}>
-          sfosfoss
+          }}
+        >
           <img src=".../Store/k14.jpg" width="760px" height="450px" />
         </div>
       );
@@ -39,7 +39,8 @@ function Gov(props) {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                    }}>
+                    }}
+                  >
                     <div className="innerSlide">
                       <img src={x.image} width="760px" height="480px" />
                       <p>{x.text}</p>
