@@ -1,8 +1,10 @@
 import "react-responsive-modal/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Gov from "./modal";
+import Loader from "react-loader-spinner";
+import "./App.css";
 import view2 from "./image/s2.jpg";
 import view from "./image/s.jpg";
 import map from "./image/iraq.jpg";
@@ -22,9 +24,33 @@ const Home = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const [loading, setLoading] = useState(false);
+  const load = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+  };
+  useEffect(() => {
+    load();
+  }, []);
   return (
-    <div>
-      <img src={map} useMap="#iraq" />
+    <div style={{ height: "80%" }}>
+      {loading ? (
+        <div className="over">
+          <div className="cont">
+            <Loader
+              type="Puff"
+              color="#00BFFF"
+              height={200}
+              width={200}
+              timeout={6000}
+            />
+          </div>
+        </div>
+      ) : null}
+      <img src={map} useMap="#iraq" style={{ height: "100%" }} />
       <map id="iraq" name="iraq">
         {coords.map((x) => {
           return (
